@@ -10,15 +10,12 @@ print("*********************************")
 # A funcao len vai servir para pegar o tamanho da minha palavra secreta
 banco_secreto= ["redes","biologia","eletromecanica"]
 forca=random.choice(banco_secreto)
-letras_desc = []
 rodada = 5
 
 ganhou= False
 enforcou= False
 
 for x in range(0, len(banco_secreto)):
-	# O append serve para acrescentar algo na minha lista
-	letras_desc.append("-")
 
 	while(rodada <= 5):
 
@@ -27,22 +24,16 @@ for x in range(0, len(banco_secreto)):
 			index=0
 			# O strip elimina os espaços em brancos da esquerda e da direita
 			palpite=input("Qual é a letra? ").lower().strip()
-
-			if(srting_length('forca')>1):
-				print("Você deve digitar apenas uma letra!")
+			
+			#verificar o tamanho do palpite, se é apenas uma letra
+			#if(srting_length('forca')>1):
+				#print("Você deve digitar apenas uma letra!")
 			#continue
-
-				#print(letras_desc[i])
 
 			for x in forca:
 				if(palpite == x):
 					print("Letra {} encontrada na posicao {}".format(palpite,index))
 					index +=1
-				
-				ganhou = True
-				for x in range(0, len(letras_desc)):
-					if ltr_descobertas[x] ==  " ":
-						ganhou = False
 
 		rodada = +1
 
